@@ -32,7 +32,7 @@ li:first-letter {
 
 .weather-app-wrapper {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .weather-app {
@@ -43,7 +43,7 @@ li:first-letter {
 }
 
 .overview {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .weather-temperature img {
