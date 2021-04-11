@@ -37,8 +37,11 @@ let months = [
 let currentMonth = months[now.getMonth()];
 let todayDate = `${dayOfWeek}, ${currentMonth} ${date}`;
 let currentTime = `${hours}:${minutes}`;
-currentDate.innerHTML = `${todayDate}`;
+
+date.innerHTML = `${todayDate}`;
+
 time.innerHTML = `${currentTime}`;
+
 function displayWeatherCondition(response) {
 document.querySelector("#city").innerHTML = response.data.name;
 document.querySelector("#temp-varies").innerHTML = Math.round(
@@ -47,7 +50,7 @@ response.data.main.temp
 }
 function search(event) {
 event.preventDefault();
-let cityInput = document.querySelector("#city-name").value;
+let cityInput = document.querySelector("#city").value;
 let units = "imperial";
 let apiKey = "d3d2e354a82a35012f377b8d7e7a023e";
 let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
