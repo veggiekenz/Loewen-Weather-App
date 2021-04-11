@@ -1,4 +1,4 @@
-h1.innerHTML = "Hello!";
+alert("Hello!");
 
 let now = new Date();
 let day = now.getDay();
