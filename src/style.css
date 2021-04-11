@@ -40,6 +40,7 @@ li:first-letter {
   border: 5px solid #ecd2fc;
   border-radius: 10px;
   background-color: #43a4bd;
+  opacity: 50%;
 }
 
 .overview {
