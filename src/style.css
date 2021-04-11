@@ -39,6 +39,7 @@ li:first-letter {
   padding: 25px;
   border: 5px solid #ecd2fc;
   border-radius: 10px;
+  background-color: silver;
 }
 
 .overview {
@@ -46,7 +47,7 @@ li:first-letter {
 }
 
 .weather-temperature img {
-  margin-right: 5px;
+  margin-right: 7px;
   height: 64px;
   width: 64px;
 }
@@ -90,8 +91,4 @@ li:first-letter {
 
 .weather-forecast-temperatures {
   font-size: 13px;
-}
-
-.btn-btn-primary-w-100 {
-  background: rgb(135, 135, 135);
 }
