@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  color: #70fde6;
+  color: #03a388;
   font-size: 26px;
   font-weight: 100;
   line-height: 28px;
@@ -37,7 +37,7 @@ li:first-letter {
 
 .weather-app {
   padding: 25px;
-  border: 5px solid #c259ff;
+  border: 5px solid #ecd2fc;
   border-radius: 10px;
 }
 
