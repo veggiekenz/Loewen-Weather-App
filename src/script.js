@@ -38,7 +38,8 @@ let currentMonth = months[now.getMonth()];
 let todayDate = `${dayOfWeek}, ${currentMonth} ${date}`;
 let currentTime = `${hours}:${minutes}`;
 
-date.innerHTML = `${todayDate}`;
+date.innerHTML = `${todayDate} at`;
+console.log(todayDate);
 
 time.innerHTML = `${currentTime}`;
 
