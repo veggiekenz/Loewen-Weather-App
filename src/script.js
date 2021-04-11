@@ -38,9 +38,9 @@ let currentMonth = months[now.getMonth()];
 let todayDate = `${dayOfWeek}, ${currentMonth} ${date}`;
 let currentTime = `${hours}:${minutes}`;
 
-let date.innerHTML = `${todayDate} at`;
+date.innerHTML = `${todayDate} at`;
 
-let time.innerHTML = `${currentTime}`;
+time.innerHTML = `${currentTime}`;
 
 function displayWeatherCondition(response) {
 document.querySelector("#city").innerHTML = response.data.name;
