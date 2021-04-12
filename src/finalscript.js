@@ -47,10 +47,9 @@ function displayTemperature(response) {
     let humidityElement = document.querySelector("#humidity");
     imperialElement.innerHTML = Math.round
     (response.data.main.temp);
-    cityElement.innerHTML =
-    (response.data.main.name);
-     descriptionElement.innerHTML =
-    (response.data.weather[0].description);
+    cityElement.innerHTML = response.data.main.name;
+    descriptionElement.innerHTML = response.data.weather[0].description;
+    humidityElement.innerHTML = response.data.main.humidity;
     }
 
 let units = "imperial";
