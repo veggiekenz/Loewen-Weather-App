@@ -37,7 +37,7 @@ let months = [
 let currentMonth = months[now.getMonth()];
 let todayDate = `${dayOfWeek}, ${currentMonth} ${date}`;
 let currentTime = `${hours}:${minutes}`;
-date.innerHTML = `${todayDate} at`;
+currentDate.innerHTML = `${todayDate}`;
 time.innerHTML = `${currentTime}`;
 
 function displayWeatherCondition(response) {
