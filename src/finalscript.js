@@ -75,5 +75,9 @@ function showPosition(position) {
     let apiUrl = `${apiEndPoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(displayWeatherCondition);
 
-    console.log(apirUrl);
     }
+
+    let apiKey = "024eca5cf1cd2fe74cef469e2a03433b";
+    let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
+    let apiUrl = `${apiEndPoint}?q=Anchorage&appid=${apiKey}&units=imperial`;
+    console.log(apiUrl);
