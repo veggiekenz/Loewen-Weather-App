@@ -63,6 +63,7 @@ form.addEventListener("submit", search);
 function showHere(event) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(showPosition);
+
     }
 
 function showPosition(position) {
@@ -73,5 +74,5 @@ function showPosition(position) {
     let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
     let apiUrl = `${apiEndPoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(displayWeatherCondition);
-    city.innerHTML= `response.data.name`;
     }
+
