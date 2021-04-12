@@ -41,36 +41,37 @@ currentDate.innerHTML = `${dayOfWeek}, ${currentMonth} ${date}`;
 time.innerHTML = `${currentTime}`;
 
 function displayWeatherCondition(response) {
-document.querySelector("#city").innerHTML = response.data.name;
-document.querySelector("#temperature").innerHTML = Math.round(
-response.data.main.temp);
-}
+    document.querySelector("#city").innerHTML = response.data.name;
+    document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp);
+    }
 
 
 function search(event) {
-event.preventDefault();
-let cityInput = document.querySelector("#city").value;
-let units = "imperial";
-let apiKey = "d3d2e354a82a35012f377b8d7e7a023e";
-let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
-let apiUrl = `${apiEndPoint}?q=${cityInput}&appid=${apiKey}&units=${units}`;
-axios.get(apiUrl).then(displayWeatherCondition);
-}
+    event.preventDefault();
+    let cityInput = document.querySelector("#city").value;
+    let units = "imperial";
+    let apiKey = "d3d2e354a82a35012f377b8d7e7a023e";
+    let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
+    let apiUrl = `${apiEndPoint}?q=${cityInput}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayWeatherCondition);
+    }
 
 let form = document.querySelector("#city-input");
 form.addEventListener("submit", search);
+
 function showHere(event) {
-event.preventDefault();
-navigator.geolocation.getCurrentPosition(showPosition);
-}
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
 
 function showPosition(position) {
-let lon = position.coords.longitude;
-let lat = position.coords.latitude;
-let units = "imperial";
-let apiKey = "d3d2e354a82a35012f377b8d7e7a023e";
-let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
-let apiUrl = `${apiEndPoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
-axios.get(apiUrl).then(displayWeatherCondition);
-city.innerHTML=response.data.name;
-}
+    let lon = position.coords.longitude;
+    let lat = position.coords.latitude;
+    let units = "imperial";
+    let apiKey = "d3d2e354a82a35012f377b8d7e7a023e";
+    let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
+    let apiUrl = `${apiEndPoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayWeatherCondition);
+    city.innerHTML= `response.data.name`;
+    }
