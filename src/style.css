@@ -20,7 +20,7 @@ li {
   margin: 0;
   padding: 0;
 
-  color: rgb(135, 135, 135);
+  color: rgb(32, 1, 73);
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
@@ -53,7 +53,7 @@ li:first-letter {
 }
 
 .weather-temperature strong {
-  color: rgb(33, 33, 33);
+  color: rgb(32, 1, 73);
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
@@ -66,7 +66,7 @@ li:first-letter {
 }
 
 .weather-temperature .active {
-  color: rgb(33, 33, 33);
+  color: rgb(32, 1, 73);
   cursor: default;
 }
 
