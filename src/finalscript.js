@@ -46,12 +46,15 @@ function displayTemperature(response) {
     let cloudiness = document.querySelectorAll("#cloudiness");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
+    let imgElement = document.querySelector("#icon");
+
     imperialElement.innerHTML = Math.round
     (response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     cloudiness.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round (response.data.wind.speed);
+    imgElement.innerHTML = response.data.weather[0].icon;
     }
 
 let units = "imperial";
