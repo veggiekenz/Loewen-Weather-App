@@ -1,5 +1,3 @@
-alert("Hello!");
-
 let now = new Date();
 let day = now.getDay();
 let month = now.getMonth();
@@ -72,5 +70,3 @@ let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
 let apiUrl = `${apiEndPoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
 axios.get(apiUrl).then(displayWeatherCondition);
 }
-let button = document.querySelector("button");
-button.addEventListener("click", showHere);
