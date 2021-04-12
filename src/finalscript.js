@@ -57,7 +57,7 @@ let apiUrl = `${apiEndPoint}?q=${cityInput}&appid=${apiKey}&units=${units}`;
 axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-let form = document.querySelector("form");
+let form = document.querySelector("#city-input");
 form.addEventListener("submit", search);
 function showHere(event) {
 event.preventDefault();
