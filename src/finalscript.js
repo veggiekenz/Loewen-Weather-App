@@ -41,8 +41,7 @@ currentDate.innerHTML = `${dayOfWeek}, ${currentMonth} ${date}`;
 time.innerHTML = `${currentTime}`;
 
 function displayTemperature(response) {
-    let imperialElement = document.querySelector("#imperial-link");
-    imperialElement.innerHTML = Math.round(response.data.main.temp);
+    imperial.innerHTML = Math.round(response.data.main.temp);
     }
 
 let units = "imperial";
