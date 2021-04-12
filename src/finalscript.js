@@ -41,13 +41,14 @@ currentDate.innerHTML = `${dayOfWeek}, ${currentMonth} ${date}`;
 time.innerHTML = `${currentTime}`;
 
 function displayTemperature(response) {
+    console.log(apiUrl);
     console.log(response.data.main.temp);
     }
 
-    let units = "imperial";
-    let apiKey = "024eca5cf1cd2fe74cef469e2a03433b";
-    let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
-    let apiUrl = `${apiEndPoint}?q=Phoenix&appid=${apiKey}&units=${units}`;
+let units = "imperial";
+let apiKey = "024eca5cf1cd2fe74cef469e2a03433b";
+let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
+let apiUrl = `${apiEndPoint}?q=Phoenix&appid=${apiKey}&units=${units}`;
     
-    axios.get(apiUrl).then(displayTemperature);
+axios.get(apiUrl).then(displayTemperature);
     
