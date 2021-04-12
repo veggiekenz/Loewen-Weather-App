@@ -41,8 +41,8 @@ currentDate.innerHTML = `${dayOfWeek}, ${currentMonth} ${date}`;
 time.innerHTML = `${currentTime}`;
 
 function displayTemperature(response) {
-    console.log(apiUrl);
-    console.log(response.data.main.temp);
+    let farenheitElement = document.querySelector("#farenheit-link");
+    farenheitElement.innerHTML = Math.round(response.data.main.temp);
     }
 
 let units = "imperial";
