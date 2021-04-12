@@ -75,8 +75,3 @@ function showPosition(position) {
     let apiUrl = `${apiEndPoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(displayWeatherCondition);
     }
-
-let apiKey = "024eca5cf1cd2fe74cef469e2a03433b";
-let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
-let apiUrl = `${apiEndPoint}?&appid=${apiKey}`;
-console.log(apiUrl);
