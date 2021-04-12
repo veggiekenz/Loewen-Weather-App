@@ -42,7 +42,15 @@ time.innerHTML = `${currentTime}`;
 
 function displayTemperature(response) {
     let imperialElement = document.querySelector("#imperial");
-    imperialElement.innerHTML = Math.round(response.data.main.temp);
+    let cityElement = document.querySelector("#city");
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    imperialElement.innerHTML = Math.round
+    (response.data.main.temp);
+    cityElement.innerHTML =
+    (response.data.main.name);
+     descriptionElement.innerHTML =
+    (response.data.weather[0].description);
     }
 
 let units = "imperial";
