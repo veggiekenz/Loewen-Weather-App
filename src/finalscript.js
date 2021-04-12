@@ -48,7 +48,7 @@ function displayTemperature(response) {
     imperialElement.innerHTML = Math.round
     (response.data.main.temp);
     cityElement.innerHTML = response.data.main.name;
-    cloudinessElement.innerHTML = response.data.weather[0].description;
+    cloudinessElement.innerHTML = (response.data.weather[0].description);
     humidityElement.innerHTML = response.data.main.humidity;
     }
 
