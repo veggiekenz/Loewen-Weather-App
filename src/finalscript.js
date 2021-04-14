@@ -43,7 +43,7 @@ time.innerHTML = `${currentTime}`;
 function displayTemperature(response) {
     let imperialElement = document.querySelector("#imperial");
     let cityElement = document.querySelector("#city");
-    let descriptor = document.querySelectorAll("#descriptor");
+    let descriptor = document.querySelector("#descriptor");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let iconElement = document.querySelector("#icon");
