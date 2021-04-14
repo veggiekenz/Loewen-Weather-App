@@ -63,11 +63,10 @@ function displayTemperature(response) {
     }
 
 function search(city) {
-    let city = document.querySelector("#city-input");
     let units = "imperial";
     let apiKey = "024eca5cf1cd2fe74cef469e2a03433b";
     let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
-    let apiUrl = `${apiEndPoint}?q=${city}&appid=${apiKey}&units=${units}`;
+    let apiUrl = `${apiEndPoint}?q=${cityInputElement}&appid=${apiKey}&units=${units}`;
     
     axios.get(apiUrl).then(displayTemperature);
     }
