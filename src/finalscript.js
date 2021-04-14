@@ -77,7 +77,18 @@ function handleSubmit(event) {
     search(cityElement.value);
 }
 
+function showImperialTemp(event); {
+    event.preventDefault();
+    let imperialTemperature = (14* 9)/ 5 +32;
+    let tempElement = document.querySelector("#temperature");
+    tempElement.innerHTML = Math.round(imperialTemperature); 
+    }
+
 search("Phoenix");
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", handleSubmit);
+
+
+let imperialLink = document.querySelector("#imperial");
+imperialLink.addEventListener("click", showImperialTemp);
