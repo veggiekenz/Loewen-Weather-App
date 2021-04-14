@@ -59,9 +59,9 @@ li:first-letter {
   font-weight: 400;
 }
 
-.weather-temperature .units {
+.weather-temperature .celcius {
   position: relative;
-  font-size: 16px;
+  font-size: 32px;
   top: -34px;
 }
 
