@@ -79,5 +79,5 @@ function handleSubmit(event) {
 
 search("Phoenix");
 
-let form = document.querySelector("#city-search");
+let form = document.querySelector("#city-form");
 form.addEventListener("submit", handleSubmit);
