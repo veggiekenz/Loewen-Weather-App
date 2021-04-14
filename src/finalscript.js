@@ -63,23 +63,21 @@ function displayTemperature(response) {
     }
 
 function search(city) {
-    let units = "imperial";
     let apiKey = "024eca5cf1cd2fe74cef469e2a03433b";
     let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
-    let apiUrl = `${apiEndPoint}?q=${cityInputElement}&appid=${apiKey}&units=${units}`;
+    let apiUrl = `${apiEndPoint}?q=${city}&appid=${apiKey}&units=imperial`;
     
     axios.get(apiUrl).then(displayTemperature);
     }
 
 
-function handleSearch(event) {
+function handleSubmit(event) {
     event.preventDefault();
     let cityInputElement = document.querySelector("#city-input");
     search(cityInputElement.value);
 }
 
-search("Phoenix");
-    
-
 let form = document.querySelector("search-form");
-form.addEventListener("submit", handleSearch);
+form.addEventListener("submit", handleSubmit);
+
+search("Phoenix");
