@@ -43,7 +43,7 @@ time.innerHTML = `${currentTime}`;
 function displayTemperature(response) {
     let imperialElement = document.querySelector("#imperial");
     let cityElement = document.querySelector("#city");
-    let cloudiness = document.querySelectorAll("#cloudiness");
+    let descriptor = document.querySelectorAll("#descriptor");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let iconElement = document.querySelector("#icon");
@@ -51,7 +51,7 @@ function displayTemperature(response) {
     imperialElement.innerHTML = Math.round
     (response.data.main.temp);
     cityElement.innerHTML = response.data.name;
-    cloudiness.innerHTML = response.data.weather[0].description;
+    descriptor.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round (response.data.wind.speed);
     iconElement.setAttribute(
