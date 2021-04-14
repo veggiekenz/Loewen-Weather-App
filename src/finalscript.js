@@ -41,14 +41,14 @@ currentDate.innerHTML = `${dayOfWeek}, ${currentMonth} ${date}`;
 time.innerHTML = `${currentTime}`;
 
 function displayTemperature(response) {
-    let imperialElement = document.querySelector("#imperial");
+    let unitsElement = document.querySelector("#units");
     let cityElement = document.querySelector("#city");
     let descriptor = document.querySelector("#descriptor");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let iconElement = document.querySelector("#icon");
 
-    imperialElement.innerHTML = Math.round
+    unitsElement.innerHTML = Math.round
     (response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     descriptor.innerHTML = response.data.weather[0].description;
@@ -65,7 +65,7 @@ function displayTemperature(response) {
 function search(city) {
     let apiKey = "024eca5cf1cd2fe74cef469e2a03433b";
     let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
-    let apiUrl = `${apiEndPoint}?q=${city}&appid=${apiKey}&units=imperial`;
+    let apiUrl = `${apiEndPoint}?q=${city}&appid=${apiKey}&units=metric`;
     
     axios.get(apiUrl).then(displayTemperature);
     }
