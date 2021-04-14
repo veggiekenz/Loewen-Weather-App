@@ -73,8 +73,8 @@ function search(city) {
 
 function handleSubmit(event) {
     event.preventDefault();
-    let cityInputElement = document.querySelector("#city-input");
-    search(cityInputElement.value);
+    let cityElement = document.querySelector("#city-search");
+    search(cityElement.value);
 }
 
 search("Phoenix");
