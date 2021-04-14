@@ -62,7 +62,8 @@ function displayTemperature(response) {
         `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`);
     }
 
-function search(location) {
+function search(city) {
+    let city = document.querySelector("#city-input");
     let units = "imperial";
     let apiKey = "024eca5cf1cd2fe74cef469e2a03433b";
     let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
