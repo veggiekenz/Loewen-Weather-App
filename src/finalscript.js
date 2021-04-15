@@ -83,11 +83,15 @@ function showImperialTemp(event) {
     event.preventDefault();
     let imperialTemperature = (celciusTemperature * 9)/ 5 +32;
     let tempElement = document.querySelector("#temperature");
+    celciusLink.classList.remove("active");
+    imperialLink.classList.add("active");
     tempElement.innerHTML = Math.round(imperialTemperature); 
     }
 
 function showCelciusTemp(event) {
     event.preventDefault();
+    celciusLink.classList.add("active");
+    imperialLink.classList.remove("active");
     let celcTempElement = document.querySelector("#temperature");
     celcTempElement.innerHTML = Math.round(celciusTemperature);
 }
