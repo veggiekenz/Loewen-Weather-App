@@ -77,7 +77,7 @@ function handleSubmit(event) {
     search(cityElement.value);
 }
 
-function showImperialTemp(event); {
+function showImperialTemp(event) {
     event.preventDefault();
     let imperialTemperature = (14* 9)/ 5 +32;
     let tempElement = document.querySelector("#temperature");
