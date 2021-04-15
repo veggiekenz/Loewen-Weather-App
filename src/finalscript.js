@@ -41,7 +41,7 @@ currentDate.innerHTML = `${dayOfWeek}, ${currentMonth} ${date}`;
 time.innerHTML = `${currentTime}`;
 
 function displayTemperature(response) {
-    let celciusElement = document.querySelector("#celcius");
+    let celciusElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
     let descriptor = document.querySelector("#descriptor");
     let humidityElement = document.querySelector("#humidity");
