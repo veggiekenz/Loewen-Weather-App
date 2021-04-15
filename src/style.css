@@ -54,7 +54,7 @@ li:first-letter {
 
 .weather-temperature strong {
   color: rgb(32, 1, 73);
-  font-size: 48px;
+  font-size: 32px;
   line-height: 1;
   font-weight: 400;
 }

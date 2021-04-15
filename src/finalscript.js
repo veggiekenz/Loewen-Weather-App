@@ -48,6 +48,8 @@ function displayTemperature(response) {
     let windElement = document.querySelector("#wind");
     let iconElement = document.querySelector("#icon");
 
+    celciusTemperature = response.data.main.temp
+
     celciusElement.innerHTML = Math.round
     (response.data.main.temp);
     cityElement.innerHTML = response.data.name;
@@ -79,16 +81,27 @@ function handleSubmit(event) {
 
 function showImperialTemp(event) {
     event.preventDefault();
-    let imperialTemperature = (14* 9)/ 5 +32;
+    let imperialTemperature = (celciusTemperature * 9)/ 5 +32;
     let tempElement = document.querySelector("#temperature");
     tempElement.innerHTML = Math.round(imperialTemperature); 
     }
 
-search("Phoenix");
+function showCelciusTemp(event) {
+    event.preventDefault();
+    let celcTempElement = document.querySelector("#temperature");
+    celcTempElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", handleSubmit);
 
-
 let imperialLink = document.querySelector("#imperial");
 imperialLink.addEventListener("click", showImperialTemp);
+
+let celciusLink = document.querySelector("#celcius");
+celciusLink.addEventListener("click", showCelciusTemp);
+
+
+search("Phoenix");
