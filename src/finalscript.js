@@ -41,7 +41,7 @@ currentDate.innerHTML = `${dayOfWeek}, ${currentMonth} ${date}`;
 time.innerHTML = `${currentTime}`;
 
 function displayForecast(response) {
-    
+    console.log(response.data.daily);
     let forecastElement = document.querySelector("#forecast");
     
     let days = ["Sun","Mon","Tues","Wed"];
@@ -52,7 +52,7 @@ function displayForecast(response) {
                     <div class="col-2">
                         <div class="weather-forecast-date">
                         ${day}</div>
-                         <img src="src/download.png" alt="dummy image" width="42"/>
+                         <img src="src/download.png" alt="dummyimage" width="42"/>
                         <div class="weather-forecast-temperatures">
                             <span class="weather-forecast-temperature-max"> 18° </span>
                             <span class="weather-forecast-temperature-min"> 12° </span>
