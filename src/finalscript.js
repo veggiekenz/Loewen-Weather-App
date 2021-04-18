@@ -89,7 +89,7 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
     let apiKey = "024eca5cf1cd2fe74cef469e2a03433b";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(displayForecast);
 }
 
@@ -123,7 +123,7 @@ function displayTemperature(response) {
 function search(city) {
     let apiKey = "024eca5cf1cd2fe74cef469e2a03433b";
     let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
-    let apiUrl = `${apiEndPoint}?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `${apiEndPoint}?q=${city}&appid=${apiKey}&units=imperial`;
     
     axios.get(apiUrl).then(displayTemperature);
     }
@@ -135,33 +135,9 @@ function handleSubmit(event) {
     search(cityElement.value);
 }
 
-function showImperialTemp(event) {
-    event.preventDefault();
-    let imperialTemperature = (celciusTemperature * 9)/ 5 +32;
-    let tempElement = document.querySelector("#temperature");
-    celciusLink.classList.remove("active");
-    imperialLink.classList.add("active");
-    tempElement.innerHTML = Math.round(imperialTemperature); 
-    }
-
-function showCelciusTemp(event) {
-    event.preventDefault();
-    celciusLink.classList.add("active");
-    imperialLink.classList.remove("active");
-    let celcTempElement = document.querySelector("#temperature");
-    celcTempElement.innerHTML = Math.round(celciusTemperature);
-}
-
 let celciusTemperature = null;
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", handleSubmit);
-
-let imperialLink = document.querySelector("#imperial");
-imperialLink.addEventListener("click", showImperialTemp);
-
-let celciusLink = document.querySelector("#celcius");
-celciusLink.addEventListener("click", showCelciusTemp);
-
 
 search("Phoenix");
