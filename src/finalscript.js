@@ -43,7 +43,7 @@ time.innerHTML = `${currentTime}`;
 function displayForecast() {
     let forecastElement = document.querySelector("#forecast");
     
-    let days = ["Sun", "Mon", "Tues"];
+    let days = ["Sun","Mon","Tues","Wed"];
 
     let forecastHTML = `<div class="row">`;
     days.forEach(function (day) {
