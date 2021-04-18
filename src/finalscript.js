@@ -94,16 +94,15 @@ function getForecast(coordinates) {
 }
 
 function displayTemperature(response) {
-    let celciusElement = document.querySelector("#temperature");
+    let imperialElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
     let descriptor = document.querySelector("#descriptor");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let iconElement = document.querySelector("#icon");
 
-    celciusTemperature = response.data.main.temp
 
-    celciusElement.innerHTML = Math.round
+    imperialElement.innerHTML = Math.round
     (response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     descriptor.innerHTML = response.data.weather[0].description;
@@ -135,7 +134,6 @@ function handleSubmit(event) {
     search(cityElement.value);
 }
 
-let celciusTemperature = null;
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", handleSubmit);
