@@ -59,21 +59,6 @@ li:first-letter {
   font-weight: 400;
 }
 
-.weather-temperature .celcius {
-  position: relative;
-  font-size: 32px;
-  top: -34px;
-}
-
-.weather-temperature .active {
-  color: rgb(32, 1, 73);
-  cursor: default;
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
-
 .weather-forecast {
   margin-top: 10px;
   text-align: center;
